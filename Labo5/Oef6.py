@@ -13,8 +13,8 @@ def MostCommon(bestand):
         diction = dict.fromkeys(set(list),0)
         for j in list:
             diction[j] +=1
-        diction.
+        return max(diction, key=diction.get)
     except FileNotFoundError:
         print("Bestand bestaat niet")
         
-MostCommon(sys.argv[1])
+print(MostCommon(sys.argv[1]))
